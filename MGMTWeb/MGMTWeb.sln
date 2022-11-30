@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGMTWeb", "MGMTWeb\MGMTWeb.csproj", "{71C36FB9-1C0B-4A5F-B72E-159041B6D3BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGMTWeb.Tests", "MGMTWeb.Tests\MGMTWeb.Tests.csproj", "{15F88D36-B71D-4415-934F-03BDCE121980}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71C36FB9-1C0B-4A5F-B72E-159041B6D3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C36FB9-1C0B-4A5F-B72E-159041B6D3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C36FB9-1C0B-4A5F-B72E-159041B6D3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C36FB9-1C0B-4A5F-B72E-159041B6D3BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F88D36-B71D-4415-934F-03BDCE121980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F88D36-B71D-4415-934F-03BDCE121980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F88D36-B71D-4415-934F-03BDCE121980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F88D36-B71D-4415-934F-03BDCE121980}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {119205A5-93BC-4FA8-A053-035A2B45C461}
+	EndGlobalSection
+EndGlobal

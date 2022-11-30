@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AreaCircle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="radius" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AreaCircleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AreaCircleResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AreasQuare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AreasQuareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AreasQuareResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AreaRectangle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Width" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AreaRectangleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AreaRectangleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AreaTriangle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="height" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="baseOfTriangle" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AreaTriangleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AreaTriangleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AreaCircleSoapIn">
+    <wsdl:part name="parameters" element="tns:AreaCircle" />
+  </wsdl:message>
+  <wsdl:message name="AreaCircleSoapOut">
+    <wsdl:part name="parameters" element="tns:AreaCircleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AreasQuareSoapIn">
+    <wsdl:part name="parameters" element="tns:AreasQuare" />
+  </wsdl:message>
+  <wsdl:message name="AreasQuareSoapOut">
+    <wsdl:part name="parameters" element="tns:AreasQuareResponse" />
+  </wsdl:message>
+  <wsdl:message name="AreaRectangleSoapIn">
+    <wsdl:part name="parameters" element="tns:AreaRectangle" />
+  </wsdl:message>
+  <wsdl:message name="AreaRectangleSoapOut">
+    <wsdl:part name="parameters" element="tns:AreaRectangleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AreaTriangleSoapIn">
+    <wsdl:part name="parameters" element="tns:AreaTriangle" />
+  </wsdl:message>
+  <wsdl:message name="AreaTriangleSoapOut">
+    <wsdl:part name="parameters" element="tns:AreaTriangleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AreasSoap">
+    <wsdl:operation name="AreaCircle">
+      <wsdl:input message="tns:AreaCircleSoapIn" />
+      <wsdl:output message="tns:AreaCircleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AreasQuare">
+      <wsdl:input message="tns:AreasQuareSoapIn" />
+      <wsdl:output message="tns:AreasQuareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AreaRectangle">
+      <wsdl:input message="tns:AreaRectangleSoapIn" />
+      <wsdl:output message="tns:AreaRectangleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AreaTriangle">
+      <wsdl:input message="tns:AreaTriangleSoapIn" />
+      <wsdl:output message="tns:AreaTriangleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AreasSoap" type="tns:AreasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AreaCircle">
+      <soap:operation soapAction="http://tempuri.org/AreaCircle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreasQuare">
+      <soap:operation soapAction="http://tempuri.org/AreasQuare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreaRectangle">
+      <soap:operation soapAction="http://tempuri.org/AreaRectangle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreaTriangle">
+      <soap:operation soapAction="http://tempuri.org/AreaTriangle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AreasSoap12" type="tns:AreasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AreaCircle">
+      <soap12:operation soapAction="http://tempuri.org/AreaCircle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreasQuare">
+      <soap12:operation soapAction="http://tempuri.org/AreasQuare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreaRectangle">
+      <soap12:operation soapAction="http://tempuri.org/AreaRectangle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreaTriangle">
+      <soap12:operation soapAction="http://tempuri.org/AreaTriangle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Areas">
+    <wsdl:port name="AreasSoap" binding="tns:AreasSoap">
+      <soap:address location="http://localhost:64670/Areas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AreasSoap12" binding="tns:AreasSoap12">
+      <soap12:address location="http://localhost:64670/Areas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\ProjectMGMT\ProjectMGMT\bin\ProjectMGMT.dll.config
+C:\Users\User\source\repos\ProjectMGMT\ProjectMGMT\bin\ProjectMGMT.dll
+C:\Users\User\source\repos\ProjectMGMT\ProjectMGMT\bin\ProjectMGMT.pdb
+C:\Users\User\source\repos\ProjectMGMT\ProjectMGMT\obj\Debug\ProjectMGMT.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ProjectMGMT\ProjectMGMT\obj\Debug\ProjectMGMT.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ProjectMGMT\ProjectMGMT\obj\Debug\ProjectMGMT.dll
+C:\Users\User\source\repos\ProjectMGMT\ProjectMGMT\obj\Debug\ProjectMGMT.pdb
